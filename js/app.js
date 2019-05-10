@@ -4,7 +4,7 @@
 //      *****   Y/N Guessing Questions 1-5  *****
 
 
-var answers = [];
+var answers = {};
 
 console.log("Oh, hi. You're not supposed to be here.\nGuess I'm your hint box now.");
 
@@ -130,51 +130,69 @@ if(question === "yes" || question === "y"){
 //      *****   Number Guessing Question 6    *****
 
 
-// var numbers= [];
-// numbers.n1 = Math.floor(Math.random() * 6);
-// numbers.n2 = Math.floor(Math.random() * 11);
-// numbers.n3 = Math.floor(Math.random() * 51);
-// numbers.n4 = Math.floor(Math.random() * 101);
-// numbers.n5 = Math.floor(Math.random() * 1001);
-
 var input;
 
 for(var i; i < 4; i++){
+
     input = prompt("Can you guess the Pokedex number of my favorite Pokemon?\nI'll give you a hint: it's a cat Pokemon.");
+
+    //      counter = 1
+    if(i === 1  && input < answers.q6){
+        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+    } else if(i === 1 && input > answers.q6){
+        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+    }
+
+    //      counter = 2
+    if(i === 2  && input < answers.q6){
+        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+    } else if(i === 2 && input > answers.q6){
+        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+    }
+
+    //      counter = 3
+    if(i === 3  && input < answers.q6){
+        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+    } else if(i === 3 && input > answers.q6){
+        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+    }
+
     if(input === "13"){
-        
+
+        //this is weedle
+
     } else if(input === "69"){
 
+        input = prompt("");
+        //this is bellsprout
+
     } else if(input === "404"){
-        input = prompt("Can you guess the Pokedex number of my favorite Pokemon?\nI'll give you a hint: it's a cat Pokemon.");
+
+        input = prompt("You got it!! My favorite Pokemon is #404, Luxio!");
         answers.q6 = input;
         answers.push();
-        input += 4;
+        i += 4;
+
     } else if(input === "420"){
+
+        //this is cherubi
 
     } else if(input === "666"){
 
+        //this is vivillion
+
     } else if(input > "812"){
+
         input = alert("There's currently only 812 Pokemon! You're guess needs to be lower.");
-        counter++;
+
     } else{
-        counter++;
-    }
-    if(i === 1  && input < answers.q6){
-        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
-    }
-    if(i === 1 && input > answers.q6){
-        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+
     }
 }
 
-//random number tester
-//console.log(numbers);
 
-// document.write('<ol>','<li>',numbers.n1,'</li>',
-//     '<li>',numbers.n2,'</li>',
-//     '<li>',numbers.n3,'</li>',
-//     '<li>',numbers.n4,'</li>',
-//     '<li>',numbers.n5,'</li>','</ol>');
+//      *****   Multiple Choice Guessing Question 7     *****
 
-// document.write('<h3>',"Nice! You guessed them all.",'</h3>');
+
+answers.q7 = [];
+

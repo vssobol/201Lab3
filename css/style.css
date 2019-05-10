@@ -20,6 +20,13 @@ img{
     margin-right: auto;
 }
 
+img:hover{
+    cursor: grab;
+}
+img:active{
+    cursor: grabbing;
+}
+
 hr{
     color: aliceblue;
 }
