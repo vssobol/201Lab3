@@ -109,21 +109,21 @@ if(question === "yes" || question === "y"){
         }
 
         if(i === 1  && input < answers.q6){
-            input = prompt("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+            input = prompt("Your guess of #" + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
         } else if(i === 1 && input > answers.q6){
-            input = prompt("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+            input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
         }
 
         if(i === 2  && input < answers.q6){
-            input = prompt("Your guess of " + input + " was too low.\nI'll give you another hint: it's an electric type Pokemon.");
+            input = prompt("Your guess of #" + input + " was too low.\nI'll give you another hint: it's an electric type Pokemon.");
         } else if(i === 2 && input > answers.q6){
-            input = prompt("Your guess of " + input + " was too high.\nI'll give you another hint: it's an electric type Pokemon.");
+            input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: it's an electric type Pokemon.");
         }
 
         if(i === 3  && input < answers.q6){
-            input = prompt("Your guess of " + input + " was too low.\nI'll give you another hint: its Pokedex number is also a common error number.");
+            input = prompt("Your guess of #" + input + " was too low.\nI'll give you another hint: its Pokedex number is also a common error number.");
         } else if(i === 3 && input > answers.q6){
-            input = prompt("Your guess of " + input + " was too high.\nI'll give you another hint: its Pokedex number is also a common error number.");
+            input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: its Pokedex number is also a common error number.");
         }
     }
 
@@ -131,19 +131,20 @@ if(question === "yes" || question === "y"){
     //      *****   Multiple Choice Guessing Question 7     *****
 
 
-    // correct = 0;
-    // counter = 0;
-    // answers.q7 = ["dragon age origins", "skyrim", "oblivion", "pokemon", "pokemon mystery dungeon", "pokemon xd", "pokemon ranger", "dragon age 2", "champions of norrath", "dragon age 2", "dragon age inquisition", "baroque", "legend of zelda", "super smash bros", "witcher 3", "uncharted", "getting over it", "cat mario", "super mario odyssey", "super mario sunshine", "super mario bros", "danganronpa", "assassins creed", "until dawn", "demons souls", "firewatch", "zero escape 999", "diablo 2", "vvvvvv", "paper mario", "doki doki literature club", "the crooked man", "pokemon insurgence"];
+    correct = 0;
+    counter = 0;
+    answers.q7 = ["dragon age origins", "skyrim", "oblivion", "pokemon", "pokemon mystery dungeon", "pokemon xd", "pokemon ranger", "dragon age 2", "champions of norrath", "dragon age 2", "dragon age inquisition", "baroque", "legend of zelda", "super smash bros", "witcher 3", "uncharted", "getting over it", "cat mario", "super mario odyssey", "super mario sunshine", "super mario bros", "danganronpa", "assassins creed", "until dawn", "demons souls", "firewatch", "zero escape 999", "diablo 2", "vvvvvv", "paper mario", "doki doki literature club", "the crooked man", "pokemon insurgence"];
 
-    // question = prompt("Final Question:\nGuess a video game that I have played and liked. You get 6 tries.");
+    var final = prompt("Final Question:\nGuess a video game that I have played and liked. You get 6 tries.");
 
-    // if(question === answers.q7){
-    //     question = prompt("");
-    //     correct++;
-    //     counter++;
-    // } else{
-    //     counter++;
-    // }
+    if(final === answers.q7){
+        final = prompt("Yep! That's one of them. Keep going and see if you can guess another one.");
+        correct++;
+        counter++;
+    } else{
+        final = prompt("Nope, haven't played that one. Try again. You have " + (6 - counter) + " tries left.");
+        counter++;
+    }
 
 
 
