@@ -54,7 +54,7 @@ if(question === "yes" || question === "y"){
     answers.q3 = answers.q3.toLowerCase();
     if(answers.q3 === "yes" || answers.q3 === "y"){
         console.log("I've beaten Getting Over It about 3 times now!");
-        response = alert("Correct! I actually enjoy playing games like Cat Mario and Getting Over It.");
+        response = alert("Correct! I actually enjoy playing games like Cat Mario and Getting Over It by Bennet Foddy.");
         score++;
     } else if(answers.q3 === "no" || answers.q3 === "n"){
         console.log("I don't think I'd be here programming if I weren't patient enough for rage games.");
@@ -145,16 +145,16 @@ for(var i; i < 4; i++){
 
     //      counter = 2
     if(i === 2  && input < answers.q6){
-        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's an electric type Pokemon.");
     } else if(i === 2 && input > answers.q6){
-        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's an electric type Pokemon.");
     }
 
     //      counter = 3
     if(i === 3  && input < answers.q6){
-        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: its Pokedex number is also a common error number.");
     } else if(i === 3 && input > answers.q6){
-        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: its Pokedex number is also a common error number.");
     }
 
     if(input === "13"){
@@ -194,5 +194,16 @@ for(var i; i < 4; i++){
 //      *****   Multiple Choice Guessing Question 7     *****
 
 
-answers.q7 = [];
+correct = 0;
+counter = 0;
+answers.q7 = ["dragon age origins", "skyrim", "oblivion", "pokemon", "pokemon mystery dungeon", "pokemon xd", "pokemon ranger", "dragon age 2", "champions of norrath", "dragon age 2", "dragon age inquisition", "baroque", "legend of zelda", "super smash bros", "witcher 3", "uncharted", "getting over it", "cat mario", "super mario odyssey", "super mario sunshine", "super mario bros", "danganronpa", "assassins creed", "until dawn", "demons souls", "firewatch", "zero escape 999", "diablo 2", "vvvvvv", "paper mario", "doki doki literature club", "the crooked man", "pokemon insurgence"];
 
+question = prompt("Final Question:\nGuess a video game that I have played and liked. You get 6 tries.");
+
+if(question === answers.q7){
+    question = prompt("");
+    correct++;
+    counter++;
+} else{
+    counter++;
+}
