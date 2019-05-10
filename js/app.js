@@ -1,9 +1,6 @@
 'use strict';
 
 
-//      *****   Y/N Guessing Questions 1-5  *****
-
-
 var answers = {};
 
 console.log("Oh, hi. You're not supposed to be here.\nGuess I'm your hint box now.");
@@ -16,7 +13,10 @@ if(question === "yes" || question === "y"){
     var response;
     var score = 0;
 
-    // question 1
+
+    //      *****   Y/N Guessing Questions 1-5  *****
+
+
     console.log("I'm bilingual and know how to speak Russian! But was it my first language? :thinking:");
     answers.q1 = prompt("Guess if: English is my first language.");
     answers.q1 = answers.q1.toLowerCase();
@@ -32,7 +32,6 @@ if(question === "yes" || question === "y"){
         response = alert("I asked you a question, please respond.");
     }
     
-    // question 2
     console.log("Did you see that cute cat on this page? She's cute, right?");
     answers.q2 = prompt("Guess if: I have a cat named Lili.");
     answers.q2 = answers.q2.toLowerCase();
@@ -48,7 +47,6 @@ if(question === "yes" || question === "y"){
         response = alert("I asked you a question, please respond.");
     }
     
-    // question 3
     console.log("I tend to compare programming to rage games. They're both pretty frustrating at times.");
     answers.q3 = prompt("Guess if: Rage games are my favorite type of video games.");
     answers.q3 = answers.q3.toLowerCase();
@@ -64,7 +62,6 @@ if(question === "yes" || question === "y"){
         response = alert("I asked you a question, please respond.");
     }
     
-    // question 4
     console.log("Photoshop costs HOW MUCH??");
     answers.q4 = prompt("Guess if: I use Photoshop as my art program of choice.");
     answers.q4 = answers.q4.toLowerCase();
@@ -80,7 +77,6 @@ if(question === "yes" || question === "y"){
         response = alert("I asked you a question, please respond.");
     }
     
-    // question 5
     console.log("Ever played Zero Escape 999? That's where I first heard about Prosopagnosia.");
     answers.q5 = prompt("Guess if: I have a hard time interacting with others because of my face blindness.");
     answers.q5 = answers.q5.toLowerCase();
@@ -95,6 +91,61 @@ if(question === "yes" || question === "y"){
         console.log("No response : (");
         response = alert("I asked you a question, please respond.");
     }
+
+
+    //      *****   Number Guessing Question 6    *****
+
+
+    answers.q6 = 404;
+    var input = prompt("Can you guess the Pokedex number of my favorite Pokemon?\nI'll give you a hint: it's a cat Pokemon.");
+
+    for(var i = 0; i < 4; i++){
+
+        if(input == 404){
+
+            input = alert("You got it! My favorite Pokemon is #404, Luxio!");
+            i += 4;
+
+        }
+
+        if(i === 1  && input < answers.q6){
+            input = prompt("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+        } else if(i === 1 && input > answers.q6){
+            input = prompt("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+        }
+
+        if(i === 2  && input < answers.q6){
+            input = prompt("Your guess of " + input + " was too low.\nI'll give you another hint: it's an electric type Pokemon.");
+        } else if(i === 2 && input > answers.q6){
+            input = prompt("Your guess of " + input + " was too high.\nI'll give you another hint: it's an electric type Pokemon.");
+        }
+
+        if(i === 3  && input < answers.q6){
+            input = prompt("Your guess of " + input + " was too low.\nI'll give you another hint: its Pokedex number is also a common error number.");
+        } else if(i === 3 && input > answers.q6){
+            input = prompt("Your guess of " + input + " was too high.\nI'll give you another hint: its Pokedex number is also a common error number.");
+        }
+    }
+
+
+    //      *****   Multiple Choice Guessing Question 7     *****
+
+
+    // correct = 0;
+    // counter = 0;
+    // answers.q7 = ["dragon age origins", "skyrim", "oblivion", "pokemon", "pokemon mystery dungeon", "pokemon xd", "pokemon ranger", "dragon age 2", "champions of norrath", "dragon age 2", "dragon age inquisition", "baroque", "legend of zelda", "super smash bros", "witcher 3", "uncharted", "getting over it", "cat mario", "super mario odyssey", "super mario sunshine", "super mario bros", "danganronpa", "assassins creed", "until dawn", "demons souls", "firewatch", "zero escape 999", "diablo 2", "vvvvvv", "paper mario", "doki doki literature club", "the crooked man", "pokemon insurgence"];
+
+    // question = prompt("Final Question:\nGuess a video game that I have played and liked. You get 6 tries.");
+
+    // if(question === answers.q7){
+    //     question = prompt("");
+    //     correct++;
+    //     counter++;
+    // } else{
+    //     counter++;
+    // }
+
+
 
     answers.push();
 
@@ -124,86 +175,4 @@ if(question === "yes" || question === "y"){
     question = alert("Sorry, I don't recognize that answer.");
     document.write('<p id="answersTitle">' + "Please refresh the page and reply with yes or no this time." + '</p>');
 
-}
-
-
-//      *****   Number Guessing Question 6    *****
-
-
-var input;
-
-for(var i; i < 4; i++){
-
-    input = prompt("Can you guess the Pokedex number of my favorite Pokemon?\nI'll give you a hint: it's a cat Pokemon.");
-
-    //      counter = 1
-    if(i === 1  && input < answers.q6){
-        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
-    } else if(i === 1 && input > answers.q6){
-        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
-    }
-
-    //      counter = 2
-    if(i === 2  && input < answers.q6){
-        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: it's an electric type Pokemon.");
-    } else if(i === 2 && input > answers.q6){
-        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: it's an electric type Pokemon.");
-    }
-
-    //      counter = 3
-    if(i === 3  && input < answers.q6){
-        input = alert("Your guess of " + input + " was too low.\nI'll give you another hint: its Pokedex number is also a common error number.");
-    } else if(i === 3 && input > answers.q6){
-        input = alert("Your guess of " + input + " was too high.\nI'll give you another hint: its Pokedex number is also a common error number.");
-    }
-
-    if(input === "13"){
-
-        //this is weedle
-
-    } else if(input === "69"){
-
-        input = prompt("");
-        //this is bellsprout
-
-    } else if(input === "404"){
-
-        input = prompt("You got it!! My favorite Pokemon is #404, Luxio!");
-        answers.q6 = input;
-        answers.push();
-        i += 4;
-
-    } else if(input === "420"){
-
-        //this is cherubi
-
-    } else if(input === "666"){
-
-        //this is vivillion
-
-    } else if(input > "812"){
-
-        input = alert("There's currently only 812 Pokemon! You're guess needs to be lower.");
-
-    } else{
-
-    }
-}
-
-
-//      *****   Multiple Choice Guessing Question 7     *****
-
-
-correct = 0;
-counter = 0;
-answers.q7 = ["dragon age origins", "skyrim", "oblivion", "pokemon", "pokemon mystery dungeon", "pokemon xd", "pokemon ranger", "dragon age 2", "champions of norrath", "dragon age 2", "dragon age inquisition", "baroque", "legend of zelda", "super smash bros", "witcher 3", "uncharted", "getting over it", "cat mario", "super mario odyssey", "super mario sunshine", "super mario bros", "danganronpa", "assassins creed", "until dawn", "demons souls", "firewatch", "zero escape 999", "diablo 2", "vvvvvv", "paper mario", "doki doki literature club", "the crooked man", "pokemon insurgence"];
-
-question = prompt("Final Question:\nGuess a video game that I have played and liked. You get 6 tries.");
-
-if(question === answers.q7){
-    question = prompt("");
-    correct++;
-    counter++;
-} else{
-    counter++;
 }
