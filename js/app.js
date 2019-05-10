@@ -147,7 +147,7 @@ if(question === "yes" || question === "y"){
 
 
 
-    answers.push();
+    answers.push;
 
     document.write('<p id="answersTitle">',"Your Answers:",'</p>',
 
