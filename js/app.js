@@ -151,7 +151,7 @@ if(question === "yes" || question === "y"){
 
     answers.push;
 
-    document.write('<p id="answersTitle">',"Your Answers:",'</p>',
+    document.write('<p id="answersTitle">',"Your Answers",'</p>',
 
         '<p id="answers">' + "English is my first language. You responded with: " + answers.q1,'<br>','<br>'
         + "I have a cat named Lili. You responded with: " + answers.q2,'<br>','<br>'
@@ -165,6 +165,22 @@ if(question === "yes" || question === "y"){
     if(score === 5){
         document.write('<p id="answersTitle">',"Purrfect!!",'</p>');
     }
+
+    
+    document.write('<hr>', '<p id="answersTitle">', "Miscellaneous Trivia", '</p>', 
+        '<p id="answersTitle">', "Favorite Movies", '</p>',
+
+        '<ol>',
+        '<li>', "1. Maleficent", '</li>',
+        '<li>', "2. Dragonheart", '</li>',
+        '<li>', "3. Zootopia", '</li>',
+        '<li>', "4. Pokemon: The First Movie", '</li>',
+        '<li>', "5. Coraline", '</li>',
+        '<li>', "6. Bridge to Terabithia", '</li>',
+        '<li>', "7. Searching", '</li>',
+        '<li>', "8. A.X.L.", '</li>',
+        '<li>', "9. The Little Mermaid", '</li>',
+        '<li>', "10. The Black Cauldron", '</li>', '</ol>');
 
 
 } else if(question === "no"){

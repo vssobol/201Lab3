@@ -39,7 +39,7 @@ hr{
     margin: 20px;
 }
 
-#answers{
+#answers, li{
     background-color: royalblue;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
