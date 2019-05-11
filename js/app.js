@@ -131,21 +131,22 @@ if(question === "yes" || question === "y"){
     //      *****   Multiple Choice Guessing Question 7     *****
 
 
-    correct = 0;
-    counter = 0;
+    var correct = 0;
     answers.q7 = ["dragon age origins", "skyrim", "oblivion", "pokemon", "pokemon mystery dungeon", "pokemon xd", "pokemon ranger", "dragon age 2", "champions of norrath", "dragon age 2", "dragon age inquisition", "baroque", "legend of zelda", "super smash bros", "witcher 3", "uncharted", "getting over it", "cat mario", "super mario odyssey", "super mario sunshine", "super mario bros", "danganronpa", "assassins creed", "until dawn", "demons souls", "firewatch", "zero escape 999", "diablo 2", "vvvvvv", "paper mario", "doki doki literature club", "the crooked man", "pokemon insurgence"];
+
 
     var final = prompt("Final Question:\nGuess a video game that I have played and liked. You get 6 tries.");
 
-    if(final === answers.q7){
-        final = prompt("Yep! That's one of them. Keep going and see if you can guess another one.");
-        correct++;
-        counter++;
-    } else{
-        final = prompt("Nope, haven't played that one. Try again. You have " + (6 - counter) + " tries left.");
-        counter++;
+    for(var c = 0; c < 6; c++){
+        for(var a = 0; a < answers.q7.length; a++){
+            if(final === answers.q7[a]){
+                final = prompt("Yep! That's one of them. Keep going and see if you can guess another one." + 
+                " You have " + (5 - c) + " tries left.");
+                correct++;
+            }
+        }
+        final = prompt("Nope, haven't played that one. Try again. You have " + (6 - c) + " tries left.");
     }
-
 
 
     answers.push;
