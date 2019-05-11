@@ -127,6 +127,7 @@ function game() {
                 input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: its Pokedex number is also a common error number.");
             }
         }
+        alert("Unfortunately, you ran out of attempts. The Pokedex number of my favorite Pokemon, Luxio, is 404. ");
 
 
         //      *****   Multiple Choice Guessing Question 7     *****
@@ -146,7 +147,7 @@ function game() {
                     correct++;
                 }
             }
-            final = prompt("Nope, haven't played that one. Try again. You have " + (6 - c) + " tries left.");
+            final = prompt("Nope, haven't played that one. Try again. You have " + (5 - c) + " tries left.");
         }
 
 
