@@ -105,6 +105,7 @@ function game() {
             if(input == answers.q6){
 
                 input = alert("You got it! My favorite Pokemon is #404, Luxio!");
+                score++;
                 i += 4;
 
             }
@@ -137,7 +138,6 @@ function game() {
         //      *****   Multiple Choice Guessing Question 7     *****
 
 
-        var correct = 0;
         answers.q7 = ["dragon age origins", "skyrim", "oblivion", "pokemon", "pokemon mystery dungeon", "pokemon xd",
         "pokemon ranger", "dragon age 2", "champions of norrath", "dragon age 2", "dragon age inquisition", "baroque",
         "legend of zelda", "super smash bros", "witcher 3", "uncharted", "getting over it", "cat mario",
@@ -153,7 +153,7 @@ function game() {
                 if(final === answers.q7[a]){
                     final = prompt("Yep! That's one of them. Keep going and see if you can guess another one." + 
                     " You have " + (5 - c) + " tries left.");
-                    correct++;
+                    score++;
                 }
                 break;
             }
@@ -171,13 +171,12 @@ function game() {
             + "I use Photoshop as my art program of choice. You responded with: " + answers.q4,'<br>','<br>'
             + "I have a hard time interacting with others because of face blindness. You responded with: " + answers.q5,'</p>');
 
-        document.write('<p id="answersTitle">',"You got " + score + "/5 right." ,'</p>');
-        console.log("You got " + score + "/5 right. Hope you learned a bit about me in the process.");
+        document.write('<p id="answersTitle">',"You got " + score + "/12 right." ,'</p>');
+        console.log("You got " + score + "/12 right. Hope you learned a bit about me in the process.");
 
-        if(score === 5){
+        if(score >= 6){
             document.write('<p id="answersTitle">',"Purrfect!!",'</p>');
         }
-
         
         document.write('<hr>', '<p id="answersTitle">', "Miscellaneous Trivia", '</p>', 
             '<p id="answersTitle">', "Favorite Movies", '</p>',
@@ -193,7 +192,12 @@ function game() {
             '<li>', "8. A.X.L.", '</li>',
             '<li>', "9. The Little Mermaid", '</li>',
             '<li>', "10. The Black Cauldron", '</li>', '</ol>');
+        
+        document.write('<hr>', '<p id="answersTitle">', "Miscellaneous Trivia", '</p>', 
+            '<p id="answersTitle">', "Favorite Games", '</p>',
 
+            '<p id="answers" style="text-transform:capitalize;">' + answers.q7 + '</p>');
+        
 
     } else if(question === "no"){
 
