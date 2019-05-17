@@ -98,12 +98,14 @@ function game() {
 
 
         answers.q6 = 404;
+        console.log("Blue cats are the best cats.")
         var input = prompt("Can you guess the Pokedex number of my favorite Pokemon?\nI'll give you a hint: it's a cat Pokemon.");
 
-        for(var i = 0; i < 4; i++){
+        for(var i = 0; i <= 4; i++){
         
             if(input == answers.q6){
 
+                console.log("People call me Lux online because I'm often associated with the Pokemon Luxio.")
                 input = alert("You got it! My favorite Pokemon is #404, Luxio!");
                 score++;
                 i += 4;
@@ -111,25 +113,40 @@ function game() {
             }
 
             if(i === 1  && input < answers.q6){
+                console.log("The National Pokedex for Sinnoh Pokemon are between numbers 387-493.")
                 input = prompt("Your guess of #" + input + " was too low.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
             } else if(i === 1 && input > answers.q6){
+                console.log("The National Pokedex for Sinnoh Pokemon are between numbers 387-493.")
                 input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
+            } else if(i === 1 && input != answers.q6){
+                console.log("???")
+                input = prompt("Sorry, I don't recognize that answer.\nI'll give you another hint: it's a Pokemon from the Sinnoh region.");
             }
 
             if(i === 2  && input < answers.q6){
+                console.log("This Pokemon should have been the first Electric/Dark type.")
                 input = prompt("Your guess of #" + input + " was too low.\nI'll give you another hint: it's an electric type Pokemon.");
             } else if(i === 2 && input > answers.q6){
+                console.log("This Pokemon should have been the first Electric/Dark type.")
                 input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: it's an electric type Pokemon.");
+            } else if(i === 2 && input != answers.q6){
+                console.log("???")
+                input = prompt("Sorry, I don't recognize that answer.\nI'll give you another hint: it's an electric type Pokemon.");
             }
 
             if(i === 3  && input < answers.q6){
-                input = prompt("Your guess of #" + input + " was too low.\nI'll give you another hint: its Pokedex number is also a common error number.");
+                console.log("Have you Not Found the Pokemon yet?")
+                input = prompt("Your guess of #" + input + " was too low.\nI'll give you another hint: it's Pokedex number is also a common error number.");
             } else if(i === 3 && input > answers.q6){
-                input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: its Pokedex number is also a common error number.");
+                console.log("Have you Not Found the Pokemon yet?")
+                input = prompt("Your guess of #" + input + " was too high.\nI'll give you another hint: it's Pokedex number is also a common error number.");
+            } else if(i === 3 && input != answers.q6){
+                console.log("???")
+                input = prompt("Sorry, I don't recognize that answer.\nI'll give you another hint: it's Pokedex number is also a common error number.");
             }
 
-            if(i === 3 && input != answers.q6){
-                alert("Unfortunately, you ran out of attempts. The Pokedex number of my favorite Pokemon, Luxio, is 404. ");
+            if(i === 4 && input != answers.q6){
+                alert("Unfortunately, you ran out of attempts. The Pokedex number of my favorite Pokemon, Luxio, is 404.");
             }
 
         }
@@ -153,17 +170,19 @@ function game() {
                 if(final === answers.q7[a]){
                     final = prompt("Yep! That's one of them. Keep going and see if you can guess another one." + 
                     " You have " + (5 - c) + " tries left.");
+                    final = final.toLowerCase();
                     score++;
                 }
                 break;
             }
             final = prompt("Nope, haven't played that one. Try again. You have " + (5 - c) + " tries left.");
+            final = final.toLowerCase();
         }
 
 
         answers.push;
 
-        document.write('<p id="answersTitle">',"Your Answers",'</p>',
+        document.write('<p id="pink">',"Your Answers",'</p>',
 
             '<p id="answers">' + "English is my first language. You responded with: " + answers.q1,'<br>','<br>'
             + "I have a cat named Lili. You responded with: " + answers.q2,'<br>','<br>'
@@ -171,15 +190,15 @@ function game() {
             + "I use Photoshop as my art program of choice. You responded with: " + answers.q4,'<br>','<br>'
             + "I have a hard time interacting with others because of face blindness. You responded with: " + answers.q5,'</p>');
 
-        document.write('<p id="answersTitle">',"You got " + score + "/12 right." ,'</p>');
+        document.write('<p id="yellow">',"You got " + score + "/12 right." ,'</p>');
         console.log("You got " + score + "/12 right. Hope you learned a bit about me in the process.");
 
         if(score >= 6){
-            document.write('<p id="answersTitle">',"Purrfect!!",'</p>');
+            document.write('<p id="yellow">',"Purrfect!!",'</p>');
         }
         
-        document.write('<hr>', '<p id="answersTitle">', "Miscellaneous Trivia", '</p>', 
-            '<p id="answersTitle">', "Favorite Movies", '</p>',
+        document.write('<hr>', '<p id="pink">', "Miscellaneous Trivia", '</p>', 
+            '<p id="yellow">', "Favorite Movies", '</p>',
 
             '<ol>',
             '<li>', "1. Maleficent", '</li>',
@@ -193,8 +212,8 @@ function game() {
             '<li>', "9. The Little Mermaid", '</li>',
             '<li>', "10. The Black Cauldron", '</li>', '</ol>');
         
-        document.write('<hr>', '<p id="answersTitle">', "Miscellaneous Trivia", '</p>', 
-            '<p id="answersTitle">', "Favorite Games", '</p>',
+        document.write('<hr>', '<p id="pink">', "Miscellaneous Trivia", '</p>', 
+            '<p id="yellow">', "Favorite Games", '</p>',
 
             '<p id="answers" style="text-transform:capitalize;">' + answers.q7 + '</p>');
         
@@ -202,12 +221,12 @@ function game() {
     } else if(question === "no"){
 
         question = alert("Alright, maybe next time.");
-        document.write('<p id="answersTitle">' + "Please refresh the page if you change your mind." + '</p>');
+        document.write('<p id="yellow">' + "Please refresh the page if you change your mind." + '</p>');
 
     } else {
 
         question = alert("Sorry, I don't recognize that answer.");
-        document.write('<p id="answersTitle">' + "Please refresh the page and reply with yes or no this time." + '</p>');
+        document.write('<p id="yellow">' + "Please refresh the page and reply with yes or no this time." + '</p>');
     }
 }
 game();
