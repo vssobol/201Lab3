@@ -108,7 +108,7 @@ function game() {
                 console.log("People call me Lux online because I'm often associated with the Pokemon Luxio.")
                 input = alert("You got it! My favorite Pokemon is #404, Luxio!");
                 score++;
-                i += 4;
+                i += 5;
 
             }
 
@@ -229,4 +229,5 @@ function game() {
         document.write('<p id="yellow">' + "Please refresh the page and reply with yes or no this time." + '</p>');
     }
 }
+
 game();
